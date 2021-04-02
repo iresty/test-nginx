@@ -459,6 +459,7 @@ sub _choose_blocks {
         next if exists $block->{SKIP};
         if ($has_first) {
             if (exists $block->{FIRST}) {
+                push @$blocks, $block;
                 $has_first = 0;
             }
             next;
